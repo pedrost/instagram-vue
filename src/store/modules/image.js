@@ -1,10 +1,6 @@
 
 const state = {
-  images: [
-    {
-      url: 'https://i.pinimg.com/236x/9c/9d/cf/9c9dcfd3c58955ff3769c12bfe22b891--baby-corgi-corgi-dog.jpg'
-    }
-  ]
+  images: []
 }
 
 const getters = {
@@ -33,7 +29,7 @@ const actions = {
 
 const mutations = {
   INSERIR_IMAGEM: function($state, data) {
-    $state.images.push(data);
+    $state.images.push(JSON.parse(data));
   }
 
 }

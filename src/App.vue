@@ -8,7 +8,11 @@
       </v-flex>
     </v-row>
 
-    <instagram-card />
+
+    <div v-for="image in getImages">
+      <instagram-card :imagemUrl="image[0].url"/>
+    </div>
+
 
   </v-app>
 </template>
@@ -18,6 +22,7 @@
 <script>
   import { mapGetters, mapActions } from 'vuex';
   import InstagramCard from '@/components/InstagramCard.vue';
+
 export default {
   name: 'App',
 
@@ -42,10 +47,10 @@ export default {
   },
 
   created() {
-    // eslint-disable-next-line 
-    this.inserirImagemDeGato();
-  }
-
+    for(let i=0; i<=10; i++) {
+      this.inserirImagemDeGato()
+    } 
+  },
 
 };
 </script>

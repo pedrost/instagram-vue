@@ -7,7 +7,7 @@
     </div>
 
     <div class="Instagram-card-image">
-      <img width="100%" src= "https://cdn2.thecatapi.com/images/e8p.png" height=600px/>
+      <img width="100%" :src="imagemUrl" height=600px/>
     </div>
 
     <div class="Instagram-card-content">
@@ -32,7 +32,9 @@
 
 <script>
   export default {
-    name: 'InstagramCard'
+    name: 'InstagramCard',
+    props: ['imagemUrl'],
+
   }
 </script>
 
