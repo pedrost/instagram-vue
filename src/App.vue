@@ -1,12 +1,10 @@
 <template>
   <v-app id="app">
-    <v-row no-gutters>
+    <v-row no-gutters justify-center>
       <v-flex xs12 class="sidenav"> 
-        <div class="logo-container">
           <span class="logo-desenho"></span>
-          <span class="linha"></span>
           <img class="logo-escrito" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"/>
-        </div>
+          <span class="logo-desenho"></span>
       </v-flex>
     </v-row>
   </v-app>
@@ -40,6 +38,8 @@ export default {
     height: 78px;
     background-color: white;
     border-bottom: 1px solid #dbdbdb;
+    display: inline-flex;
+    justify-content: space-between;
   }
 
   .linha {
@@ -56,18 +56,17 @@ export default {
   }
 
   .logo-desenho {
-    margin-top: 12px;
     background-image: url('~@/assets/instagram-logo.png');
     background-size: 24px;
     background-position: center;
-    height: 48px;
+    height: auto;
     width: 48px;
     display: inline-block;
 
   }
 
   .logo-escrito {
-    margin-bottom: 6px;
-    margin-left: 16px;
+    height: fit-content;
+    margin: auto;
   }
 </style>
