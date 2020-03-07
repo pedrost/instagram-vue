@@ -7,22 +7,46 @@
           <span class="logo-desenho"></span>
       </v-flex>
     </v-row>
+
+    <instagram-card />
+
   </v-app>
 </template>
 
 
 
 <script>
-
+  import { mapGetters, mapActions } from 'vuex';
+  import InstagramCard from '@/components/InstagramCard.vue';
 export default {
   name: 'App',
 
   components: {
+    InstagramCard
   },
 
   data: () => ({
     //
   }),
+
+  computed: {
+    ...mapGetters([
+      'getImages'
+    ])
+  },
+
+  methods: {
+    ...mapActions([
+      'inserirImagemDeGato'
+    ])
+  },
+
+  created() {
+    // eslint-disable-next-line 
+    this.inserirImagemDeGato();
+  }
+
+
 };
 </script>
 
