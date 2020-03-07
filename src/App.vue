@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="app">
+    <v-row no-gutters>
+      <v-flex xs12 class="sidenav"> 
+        sidenav
+      </v-flex>
+    </v-row>
+  </v-app>
 </template>
 
+
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
-}
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style type="text/css">
+
+  #app {
+    background-color: rgba(var(--b3f,250,250,250),1);
+    height: 100%;
+    width: 100%;
+  }
+
+  .sidenav {
+    height: 78px;
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+  }
 </style>
